@@ -1,0 +1,30 @@
+CREATE or REPLACE PROCEDURE SP_TPENSION
+(
+NOMBREPENSION IN VARCHAR2,
+PORCENTAJE IN NUMBER
+) AS
+
+P_IDPENSION NUMBER;
+P_IDPERIODO NUMBER;
+
+BEGIN
+    --Incrementar el ID de la TABLE Pension
+    SELECT NVL(MAX(id_pension),0)+1
+    INTO P_IDPENSION
+    FROM pension;
+    --Seleccionar Periodo Activo
+    SELECT id_periodo
+    INTO P_IDPERIODO
+    FROM periodo
+    WHERE estado=1;
+
+    INSERT INTO pension
+        (id_pension,nombre,porcentaje,estado,id_periodo)
+    VALUES(P_IDPENSION, NOMBREPENSION, TO_NUMBER(PORCENTAJE), 1, P_IDPERIODO);
+END;
+--Ejecutar Stored Procedures
+EXECUTE SP_TPENSION('ONP', '13,00');
+EXECUTE SP_TPENSION('AFP INTEGRA','12,91');
+EXECUTE SP_TPENSION('AFP PRIMA','12,96');
+EXECUTE SP_TPENSION('AFP PROFUTURO','13,05');
+EXECUTE SP_TPENSION('AFP HABITAT','12,83');

@@ -27,13 +27,16 @@ Extraer el maximo valor MAX(), si esta null reemplazar por '2009' NVL(,'') y a a
 
     IF P_YEARMAX = P_YEARSYS THEN
 
-    INSERT INTO periodo
-        (id_periodo, nombre, estado)
-    VALUES(P_IDPERIODO, P_YEARMAX, 1);
-    
-    ELSE
-    INSERT INTO periodo
-        (id_periodo, nombre, estado)
-    VALUES(P_IDPERIODO, P_YEARMAX, 0);
-END IF;
+        INSERT INTO periodo
+            (id_periodo, nombre, estado)
+        VALUES(P_IDPERIODO, P_YEARMAX, 1);
+        
+        ELSE
+        INSERT INTO periodo
+            (id_periodo, nombre, estado)
+        VALUES(P_IDPERIODO, P_YEARMAX, 0);
+    END IF;
 END;
+
+--Ejecutar Stored Procedures
+EXECUTE SP_TPERIODO();
