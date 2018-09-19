@@ -24,17 +24,19 @@ Son para manipular los strings.
 
 Si no especificamos trim_character, se quitan los espacios en blanco.
 Finalmente si solo ponemos trim_source quita blancos por delante y por detras.
+
 | Función       | Ejemplo       |Resultado      |Descripción    |
 |:-------------:|:-------------:|:-------------:|:-------------:|
-| TrimBoth      |`Trim(BOTH '_' FROM '_Juan_');` o  `SELECT TRIM('     PEPE PEREZ      ') FROM DUAL;`|Juan|Elimina los caracteres iniciales y finales especificados de una cadena de caracteres.
-| TrimLeading   | ```Trim(LEADING '_' FROM '_Juan')``` |Juan|Elimina los caracteres iniciales especificados de una cadena de caracteres.
-| TrimTrailing  | ```Trim(TRAILING '_' FROM 'Juan_')``` |Juan|Elimina los caracteres finales especificados de una cadena de caracteres.
+| TrimBoth      |`Trim(BOTH '_' FROM '_Juan_');` o  `SELECT TRIM('     PEPE PEREZ      ') FROM DUAL;`|Juan|Elimina los caracteres iniciales y finales especificados de una cadena de caracteres.|
+| TrimLeading   | ```Trim(LEADING '_' FROM '_Juan')``` |Juan|Elimina los caracteres iniciales especificados de una cadena de caracteres.|
+| TrimTrailing  | ```Trim(TRAILING '_' FROM 'Juan_')``` |Juan|Elimina los caracteres finales especificados de una cadena de caracteres.|
 | LTRIM(char, [,set])  | ```SELECT LTRIM('       Juan Limas') FROM DUAL;``` |Juan Limas|por defecto Elimina los espacios de la inquierda, puedes definir el caracter que deseas eliminar.
 | RTRIM(char, [,set])  | ```SELECT LTRIM('Juan Limas       ') FROM DUAL;``` |Juan Limas|por defecto Elimina los espacios de la derecha, puedes definir el caracter que deseas eliminar.
 
 
 ### Funciones matemáticas
 Permite hacer operaciones matemáticas
+
 | Función       | Ejemplo       |Resultado      |Descripción    |
 |:-------------:|:-------------:|:-------------:|:-------------:|
 |ROUND(n [,m])  |`SELECT ROUND(99.5452,2) FROM DUAL;`|99.55|Redondea __*n*__ con __*m*__ decimales, por defecto __m=0__|
