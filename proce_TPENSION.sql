@@ -20,7 +20,7 @@ BEGIN
 
     INSERT INTO pension
         (id_pension,nombre,porcentaje,estado,id_periodo)
-    VALUES(P_IDPENSION, NOMBREPENSION, TO_NUMBER(PORCENTAJE), 1, P_IDPERIODO);
+    VALUES(P_IDPENSION, NOMBREPENSION, PORCENTAJE, 1, P_IDPERIODO);
 END;
 --Ejecutar Stored Procedures
 EXECUTE SP_TPENSION('ONP', '13,00');
