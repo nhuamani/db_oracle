@@ -18,6 +18,8 @@ Son para manipular los strings.
 |RPAD(char1, n [,char2])|```SELECT RPAD('Juan Limas',15,'-') FROM DUAL; ```|Juan Limas-----|Rellena el string a la derecha con la longitud __*n*__ y con el caracter definido __*char2*__ |
 |LPAD(char1, n [,char2])|```SELECT RPAD('Juan Limas',15,'-') FROM DUAL; ```|-----Juan Limas|Rellena el string a la izquierda con la longitud __*n*__ y con el caracter definido __*char2*__ |
 |SUBSTR(char, m [, n])|```SELECT SUBSTR('Juan Limas',4,5) FROM DUAL; ```|n Lim|Devuelve un string de __*n*__ caracteres a partir de la posición __*m*__, si es __*-m*__ empieza a contar desde el final |
+|VNL(expr1, expr2)|```SELECT VNL('Juan Limas',4,5) FROM DUAL; ```|n Lim| |
+|DECODE(expr1, expr2)|```SELECT VNL(nota,11,'Aporbado','Desaprobado') FROM DUAL; ```|n Lim| |
 
 ### __TRIM__ 
 ```TRIM(LEADING|TRAILING|BOTH trim_char FROM trim_source)```
@@ -46,4 +48,5 @@ Permite hacer operaciones matemáticas
 |LEAST(n1,n2,n3,...)  |`SELECT LEAST(99,45,67,4,2,11,1) FROM DUAL;`|1|Devuelve el menor valor de la lista|
 |GREATEST(n1,n2,n3,...)  |`SELECT GREATEST(99,45,67,4,2,11,1) FROM DUAL;`|99|Devuelve el mayor valor de la lista|
 |Pi(n1,n2,n3,...)  |`SELECT Pi() FROM DUAL;`||Devuelve la constante pi.|
+|suma()  |`SELECT Pi() FROM DUAL;`||Devuelve la suma de la columna|
 
